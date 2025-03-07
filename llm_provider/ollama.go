@@ -23,7 +23,7 @@ type OllamaResponse struct {
 var apiEndpoint = "http://localhost:11434/api/generate"
 
 // GenerateResponse sends a prompt to the Ollama API and returns the generated response
-func GenerateResponse(prompt, model string) (string, error) {
+func GenerateOllamaResponse(prompt, model string) (string, error) {
 	// Prepare the request body
 	reqBody := OllamaRequest{
 		Model:  model,

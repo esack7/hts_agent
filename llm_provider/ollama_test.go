@@ -55,7 +55,7 @@ func TestGenerateResponse(t *testing.T) {
 	defer func() { apiEndpoint = originalEndpoint }()
 
 	// Call the function
-	response, err := GenerateResponse("Hello, world!", "llama2")
+	response, err := GenerateOllamaResponse("Hello, world!", "llama2")
 
 	// Check for errors
 	if err != nil {
@@ -83,7 +83,7 @@ func TestGenerateResponse_Error(t *testing.T) {
 	defer func() { apiEndpoint = originalEndpoint }()
 
 	// Call the function
-	_, err := GenerateResponse("Hello, world!", "llama2")
+	_, err := GenerateOllamaResponse("Hello, world!", "llama2")
 
 	// Check for errors
 	if err == nil {
@@ -106,7 +106,7 @@ func TestGenerateResponse_InvalidJSON(t *testing.T) {
 	defer func() { apiEndpoint = originalEndpoint }()
 
 	// Call the function
-	_, err := GenerateResponse("Hello, world!", "llama2")
+	_, err := GenerateOllamaResponse("Hello, world!", "llama2")
 
 	// Check for errors
 	if err == nil {

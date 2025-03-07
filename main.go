@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	prompt := "What is 2+2?"
+	prompt := "Tell me a haiku about Robin Hood."
 	model := "phi4-mini:latest"
 
-	response, err := llm_provider.GenerateResponse(prompt, model)
+	response, err := llm_provider.GenerateOllamaResponse(prompt, model)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 		return
